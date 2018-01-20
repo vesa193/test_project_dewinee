@@ -1,0 +1,127 @@
+@import ../helpers/vars.sass
+@import ../helpers/mixins.sass
+@import ../buttons/buttons.sass
+
+.jobs
+    width: 100%
+    +flexbox()
+    +justify-content(center)
+    +align-items(center)
+
+
+    &__wrapper
+        width: 100%
+        +flexbox()
+        +flex-direction(column)
+        +justify-content(center)
+        +align-items(center)
+
+    &__hide-box
+        width: 100%
+        display: none 
+        margin-top: 80px
+        +transition(display, .4s, ease-in-out)   
+
+    &__title
+        +flexbox()
+        +flex-direction(column)
+        +justify-content(center)
+        +align-items(center)
+        text-align: center
+        margin-bottom: 80px
+
+        h5
+            font-size: $above-headline
+            color: $above-headline-color
+            margin-bottom: 25px
+            letter-spacing: .2em
+            font-weight: 700
+        h3
+            font-size: $h3
+            font-weight: 400
+        p
+            font-size: $headline
+    &__border-red
+        width: 200px
+        height: 2px
+        +flexbox()
+        +background('../img/border-red.png', center, no-repeat)
+        +background-size(content) 
+        margin: 40px 0     
+
+.job
+    &--first
+        margin-bottom: 80px 
+    &--last
+        margin-top: 80px
+
+    &__text
+        +flexbox()
+        +justify-content(space-between)
+        
+        p
+            font-size: $p
+
+    &__hash
+        margin: 40px 0 0 0    
+    
+        &--black
+            color: #fff
+            
+
+
+
+.jobs__addition
+    display: block
+    +transition(display, .4s, ease-in-out)
+
+
+//smartphone / extra-small devices
+
+//@media (max-width: $screen-xs-max) 
+
+    
+                
+
+
+
+//@media all and (min-width: $screen-lg-min)  
+
+                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

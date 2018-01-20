@@ -1,0 +1,98 @@
+@import ../helpers/vars.sass
+@import ../helpers/mixins.sass
+
+
+//first button on the page
+.button1 
+    font-size: $p
+    border: 1px solid #000000
+    letter-spacing: .2em
+    padding: 10px 40px
+    text-align: center
+    color: $p-color
+    +transition(all, .3s, ease-in-out)
+
+    &:hover
+        border: 1px solid #000
+        background: #000000
+        color: #ffffff
+
+
+//second button on the page, on black background
+
+.button2 
+    font-size: .8em
+    border: 1px solid #ffffff
+    background: transparent
+    letter-spacing: .2em
+    padding: 10px 40px
+    text-align: center
+    color: #ffffff
+    +transition(all, .3s, ease-in-out)
+
+    &:hover
+        border: 1px solid #000000
+        background: #ffffff  
+        color: #000000    
+
+
+//button 3th on the page
+
+.button3 
+    display: block
+    font-size: $p
+    border: 1px solid #eee
+    background: #eee
+    letter-spacing: .2em
+    padding: 20px
+    margin: 120px 0 120px 0
+    text-align: center
+    color: #000
+    +transition(all, .3s, ease-in-out)
+
+    &:hover
+        border: 1px solid #eee
+        background: #fff  
+        color: #000         
+
+
+//hashatag button
+.hashtag-btn-black 
+    font-size: $p
+    border: 1px solid #fff
+    +border-radius(3px)
+    color: #fff
+    padding: 10px 20px
+    +transition(all, .3s, ease-in-out)
+
+.hashtag-btn
+    font-size: $p
+    border: 1px solid #ccc
+    +border-radius(3px)
+    color: $hashtag-color 
+    padding: 10px 40px
+    +transition(all, .3s, ease-in-out)
+
+
+
+
+
+
+@media (max-width: $screen-xs-max) 
+    .button1 
+        display: none
+
+    .button2
+        display: none
+
+    .button3 
+        padding: 20px
+        
+    .hashtag-btn-black 
+        border: 0
+        padding: 0 5px
+
+    .hashtag-btn
+        border: 0
+        padding: 0 5px
+

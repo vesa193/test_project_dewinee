@@ -1,0 +1,22 @@
+
+    .job
+        width: 100%
+        +flexbox()
+        +justify-content(center)
+
+        &--black
+            +flexbox()
+            +justify-content(center)
+            +align-items(center)
+            width: 100%
+            background: $sec-bgd
+            padding: 40px 0
+
+        &__description
+            width: 80%
+
+            &--black
+                width: 80%
+
+         &__btn
+            padding: 10px 20px

@@ -1,0 +1,36 @@
+@import ../helpers/vars.sass
+@import ../helpers/mixins.sass
+
+.footer-down
+    width: 100%
+    background: $footer
+    padding: 20px 0      
+    +flexbox()
+    +justify-content(center)
+    +align-items(center)
+
+    &__copyright
+        width: 80%
+        +flexbox()
+        +justify-content(space-between)
+        +align-items(center)
+        color: gray
+
+        p
+            font-size: $p
+
+        i 
+            font-size: $footer-icon
+
+        a
+           +transition(color, 0.3s, ease-in-out)
+           color: gray
+
+
+           &:hover
+            color: #ffffff
+
+    &__right
+        width: 21%
+        +flexbox()
+        +justify-content(space-between)        

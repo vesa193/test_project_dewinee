@@ -1,0 +1,989 @@
+@import ../helpers/vars.sass
+@import ../helpers/mixins.sass
+
+
+
+// Usage
+
+//smartphone / extra-small devices
+
+@media (max-width: $screen-xs-max) 
+
+    //header
+    .header
+        width: 100%
+        height: 695px
+        +background('../img/bunner.jpg', center, no-repeat)
+        +background-size(cover)
+
+        &__heading
+            width: 100%
+            margin: 33.4% auto
+            h1
+                font-size: $h1-xs
+             
+        &__headline--small
+            display: block
+
+        &__text-hide-sm
+            display: block  
+
+            .break-text
+                display: none
+
+        &__border-red
+            width: 200px
+            height: 80px
+            +flexbox()
+            +background('../img/border-red.png', center, no-repeat)
+            +background-size(content) 
+            margin: 0 auto         
+            visibility: visible
+        
+    //navbar
+    .navbar   
+        +flexbox()
+        +align-items(center)
+
+    .nav
+        width: 100%
+        +flexbox()
+        padding: 0 20px
+        position: relative
+
+        &__logo
+            width: 148px
+
+        &__hamburger
+            cursor: pointer
+            width: 30px
+            height: 24px    
+            +background('../img/hamburger.png', center, no-repeat)
+            +background-size(cover)
+            position: absolute
+            right: 20px
+            bottom: 20px
+
+        &__menu
+            +transition(height, .4s, cubic-bezier(.46,.03,.52,.96))
+            width: 100%
+            position: absolute
+            top: 70px
+            left: 0
+            //height: 528px
+            height: 0
+            overflow: hidden
+            background: rgba(0,0,0,.95)
+            z-index: 100
+            text-align: center
+
+        &__menu--open
+            height: 625px
+            +transition(height, .4s, cubic-bezier(.46,.03,.52,.96))
+
+
+        &__links    
+            width: 100%
+            height: 50%  
+            margin-top: 100px
+            
+
+        &__item
+            width: 100%
+            
+
+            &:hover
+                color: $bgd-base-color
+
+        &__link    
+            width: 100%
+            font-size: 1.3em
+            font-weight: 300
+            margin: 40px 0
+
+            &:hover
+                color: $bgd-base-color
+
+        &__follow
+            width: 100%
+            display: block
+            position: relative
+            top: 90px
+            padding: 0 20px 
+
+            a
+                float: left
+                color: gray
+                font-size: $h5
+                letter-spacing: .2em
+                +transition(all, .3s, ease-in-out)
+
+                &:hover
+                    color: $bgd-base-color
+
+        &__icons
+            float: right
+            position: relative
+            bottom: 12px
+
+
+            a
+                color: gray  
+                font-size: $footer-icon
+                +transition(all, .3s, ease-in-out) 
+
+                &:hover
+                    color: $bgd-base-color
+
+                &:first-child
+                    margin-right: 20px            
+
+        &__link
+            color: gray
+            float: left
+
+    //services
+    .services
+        flex-direction: column
+
+    .card
+        padding: 80px 15px 40px 15px
+    //jobs
+       //...... 
+    //jobs
+    .jobs
+
+        &__title
+            padding: 0 15px
+            width: 100%
+
+            h3
+                font-size: $h3
+
+            p
+                font-size: $headline-xs
+                width: 100%
+
+        &__wrapper
+            text-align: center
+
+    .job
+        float: left
+        width: 100% 
+        padding: 0 15px 
+
+        &__description
+            width: 100%
+            text-align: left
+        
+
+            &--black
+                width: 100%     
+
+        /* &__btn
+            padding: 0 5px */ 
+
+        &__text
+            width: 100%
+        
+            p
+                font-size: $p
+                width: 100%
+        &__title
+            font-size: $h5
+            margin-bottom: 20px
+
+        &__hash
+
+            &--lg
+                display: none  
+
+        &__btn
+            text-align: center          
+
+    //about
+    .about
+        float: left
+        padding: 0 15px
+
+        &__wrap
+            width: 100%
+            +flexbox()
+            +flex-direction(column)
+            +justify-content(center)
+            +align-items(center)
+             
+            h3
+                text-align: center
+                line-height: 90%
+
+        &__text
+            width: 100%
+
+            /* p
+                &:nth-child(2)
+                    margin-top: 40px */
+
+        &__border-red
+            visibility: visible
+
+
+    //socials
+        //.......
+    .socials
+        float: left
+        margin: 150px 0 120px 0
+
+        &__icons
+            position: relative
+    //footer
+        //...........
+        //footer
+    .footer
+        float: left
+        padding: 80px 30px 40px 30px
+
+
+        &__contact
+            width: 100%
+            height: auto  
+
+
+        &__info
+
+            &:nth-child(1)
+                margin-bottom: 40px 
+            &:nth-child(2)
+                margin-bottom: 40px 
+            &:nth-child(3)
+                margin-bottom: 60px   
+
+        &__title
+            margin-bottom: 20px   
+
+            img
+                float: left
+
+            h5
+                position: relative
+                top: 10px
+                margin-left: 30px
+
+        &__socials
+            float: left
+            width: 100%
+            position: relative
+
+            &__icons
+                float: left
+
+                a
+                    font-size: $footer-icon
+                    color: gray
+
+                    &:hover
+                        color: #ffffff
+                        +transition(all, .3s, ease-in-out)
+
+                    &:nth-child(1)
+                        margin-right: 1em
+
+            &__link
+                position: relative
+                float: right
+                top: 10px
+                color: gray
+                font-size: $p
+
+                &:hover
+                    color: #ffffff
+                    +transition(all, .3s, ease-in-out)        
+
+
+    //footer-down
+    .footer-down
+        float: left
+        &__right
+            display: none
+
+        &__hide-text-sm
+            display: none    
+
+
+
+//small devices (tablet, notebook)
+
+@media all and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) 
+    
+    //header
+    .header
+        width: 100%
+        height: 695px
+        +background('../img/bunner.jpg', center, no-repeat)
+        +background-size(cover)
+
+        &__heading
+            margin: 10.4% auto
+            h1
+                font-size: $h1
+             
+        &__headline--small
+            display: none
+
+        &__text-hide-sm
+            display: block  
+
+            .brake-text
+                display: none
+
+        &__border-red
+            width: 200px
+            height: 80px
+            +flexbox()
+            +background('../img/border-red.png', center, no-repeat)
+            +background-size(content) 
+            margin: 0 auto         
+            visibility: visible
+        
+    //navbar
+    .navbar   
+        +flexbox()
+        +align-items(center)
+
+    .nav
+        width: 100%
+        +flexbox()
+        padding: 0 20px
+        position: relative
+
+        &__logo
+            width: 148px
+
+        &__hamburger
+            cursor: pointer
+            width: 30px
+            height: 24px    
+            +background('../img/hamburger.png', center, no-repeat)
+            +background-size(cover)
+            position: absolute
+            right: 20px
+            bottom: 20px
+
+        &__menu
+            +transition(height, .4s, cubic-bezier(.46,.03,.52,.96))
+            width: 100%
+            position: absolute
+            top: 70px
+            left: 0
+            //height: 528px
+            height: 0
+            overflow: hidden
+            background: rgba(0,0,0,.95)
+            z-index: 100
+            text-align: center
+
+        &__menu--open
+            height: 625px
+            +transition(height, .4s, cubic-bezier(.46,.03,.52,.96))
+
+
+        &__links    
+            width: 100%
+            height: 50%  
+            margin-top: 100px
+            
+
+        &__item
+            width: 100%
+            
+
+            &:hover
+                color: $bgd-base-color
+
+        &__link    
+            width: 100%
+            font-size: 1.3em
+            font-weight: 300
+            margin: 40px 0
+
+            &:hover
+                color: $bgd-base-color
+
+        &__follow
+            width: 100%
+            display: block
+            position: relative
+            top: 90px
+            padding: 0 20px 
+
+            a
+                float: left
+                color: gray
+                font-size: $h5
+                letter-spacing: .2em
+                +transition(all, .3s, ease-in-out)
+
+                &:hover
+                    color: $bgd-base-color
+
+        &__icons
+            float: right
+            position: relative
+            bottom: 12px
+
+
+            a
+                color: gray  
+                font-size: $footer-icon
+                +transition(all, .3s, ease-in-out) 
+
+                &:hover
+                    color: $bgd-base-color
+
+                &:first-child
+                    margin-right: 20px            
+
+        &__link
+            color: gray
+            float: left                
+
+
+
+    //services
+    .services
+        float: left
+        width: 100%
+        
+    .card
+        padding: 80px 40px 40px 40px
+        float: left
+        width: 33%
+
+    //jobs
+    .job
+        width: 100%
+
+        &--black
+            width: 100%
+            background: $sec-bgd
+            padding: 40px 0
+
+        &__description
+            width: 80%
+            margin: 0 auto
+            text-align: left
+
+            &--black
+                width: 80%  
+                margin: 0 auto
+
+        &__text
+        
+            p
+                font-size: $p
+                display: inline
+
+        &--black
+            color: #fff 
+
+        &__title
+            font-size: $h5
+            margin-bottom: 20px
+
+        &--black
+            color: #ffffff
+
+        &__hash
+
+            &--small
+                display: none        
+    //about
+    .about
+
+        &__wrap
+            width: 100%
+
+            &__br-on-sm 
+                display: none
+
+        &__text
+            width: 80%
+    //socials
+    //........
+    .socials
+        float: left
+        margin: 200px 0 150px 0
+
+
+
+    //footer
+    .footer
+        float: left
+        width: 100%
+        padding: 80px 0
+
+        &__contact
+            width: 80%
+            margin: 0 auto 
+
+        &__info
+            float: left
+            width: 33%
+
+        &__title
+            margin-bottom: 20px   
+
+            img
+                float: left
+
+            h5
+                position: relative
+                top: 10px
+                margin-left: 30px
+
+        &__socials
+            &--small
+                display: none    
+
+    //footer-down
+    .footer-down
+        float: left
+
+        &__right
+            width: 41%
+
+        &__right--small
+            display: none
+
+//medium devices (laptop)
+
+@media all and (min-width: $screen-md-min) and (max-width: $screen-md-max) 
+    //header
+    .header
+        width: 100%
+        height: 695px
+        +background('../img/bunner.jpg', center, no-repeat)
+        +background-size(cover)
+
+        &__heading
+            margin: 10.4% auto
+            h1
+                font-size: $h1
+             
+        &__headline--small
+            display: none
+
+        &__text-hide-sm
+            display: block  
+
+            .break-text
+                display: none
+
+        &__border-red
+            width: 200px
+            height: 80px
+            +flexbox()
+            +background('../img/border-red.png', center, no-repeat)
+            +background-size(content) 
+            margin: 0 auto         
+            visibility: visible
+        
+    //navbar
+    .navbar   
+        +flexbox()
+        +align-items(center)
+
+    .nav
+        width: 100%
+        +flexbox()
+        padding: 0 20px
+        position: relative
+
+        &__logo
+            width: 148px
+
+        &__hamburger
+            cursor: pointer
+            width: 30px
+            height: 24px    
+            +background('../img/hamburger.png', center, no-repeat)
+            +background-size(cover)
+            position: absolute
+            right: 20px
+            bottom: 20px
+
+        &__menu
+            +transition(height, .4s, cubic-bezier(.46,.03,.52,.96))
+            width: 100%
+            position: absolute
+            top: 70px
+            left: 0
+            //height: 528px
+            height: 0
+            overflow: hidden
+            background: rgba(0,0,0,.95)
+            z-index: 100
+            text-align: center
+
+        &__menu--open
+            height: 625px
+            +transition(height, .4s, cubic-bezier(.46,.03,.52,.96))
+
+
+        &__links    
+            width: 100%
+            height: 50%  
+            margin-top: 100px
+            
+
+        &__item
+            width: 100%
+            
+
+            &:hover
+                color: $bgd-base-color
+
+        &__link    
+            width: 100%
+            font-size: 1.3em
+            font-weight: 300
+            margin: 40px 0
+
+            &:hover
+                color: $bgd-base-color
+
+        &__follow
+            width: 100%
+            display: block
+            position: relative
+            top: 90px
+            padding: 0 20px 
+
+            a
+                float: left
+                color: gray
+                font-size: $h5
+                letter-spacing: .2em
+                +transition(all, .3s, ease-in-out)
+
+                &:hover
+                    color: $bgd-base-color
+
+        &__icons
+            float: right
+            position: relative
+            bottom: 12px
+
+
+            a
+                color: gray  
+                font-size: $footer-icon
+                +transition(all, .3s, ease-in-out) 
+
+                &:hover
+                    color: $bgd-base-color
+
+                &:first-child
+                    margin-right: 20px            
+
+        &__link
+            color: gray
+            float: left                
+        
+    //services
+    .services
+        float: left
+        width: 100%
+        
+    .card
+        padding: 80px 40px 40px 40px
+        float: left
+        width: 33%
+
+    //jobs
+    .job
+        width: 100%
+
+        &--black
+            width: 100%
+            background: $sec-bgd
+            padding: 40px 0
+
+        &__description
+            width: 80%
+            margin: 0 auto
+            text-align: left
+
+            &--black
+                width: 80%  
+                margin: 0 auto
+
+        &__text
+        
+            p
+                font-size: $p
+                display: inline
+
+        &--black
+            color: #fff 
+
+        &__title
+            font-size: $h5
+            margin-bottom: 20px
+
+        &--black
+            color: #ffffff
+
+        &__hash
+
+            &--small
+                display: none        
+    //about
+    .about
+
+        &__wrap
+            width: 80%
+
+            &__br-on-sm 
+                display: none
+
+        &__text
+            width: 60%
+    //socials
+    //........
+    .socials
+        float: left
+        margin: 200px 0 150px 0
+
+
+
+    //footer
+    .footer
+        float: left
+        width: 100%
+        padding: 80px 0
+
+        &__contact
+            width: 80%
+            margin: 0 auto 
+
+        &__info
+            float: left
+            width: 33%
+
+        &__title
+            margin-bottom: 20px   
+
+            img
+                float: left
+
+            h5
+                position: relative
+                top: 10px
+                margin-left: 30px
+
+        &__socials
+
+            &--small
+                display: none    
+
+    //footer-down
+    .footer-down
+        float: left
+
+        &__right
+            width: 31%
+
+        &__right--small
+            display: none
+
+
+
+//large screen
+
+@media all and (min-width: $screen-lg-min)  
+    //header
+    .header
+        width: 100%
+        height: 695px
+        +background('../img/bunner.jpg', center, no-repeat)
+        +background-size(cover)
+
+        &__heading
+            margin: 10.4% auto
+            h1
+                font-size: $h1
+             
+        &__headline--small
+            display: none
+
+        &__text-hide-sm
+            display: block  
+
+            .break-text
+                display: none
+
+        &__border-red
+            width: 200px
+            height: 80px
+            +flexbox()
+            +background('../img/border-red.png', center, no-repeat)
+            +background-size(content) 
+            margin: 0 auto         
+            visibility: visible        
+
+    //navbar in header section
+    .navbar   
+        +flexbox()
+        +justify-content(center)
+        +align-items(center)
+    
+    .nav
+        width: 80%
+        height: 70px 
+        margin: 0 auto
+        position: relative
+
+        &__logo
+            width: 200px
+            float: left
+
+        &__hamburger
+            display: none
+
+        &__links    
+            width: 35%
+            position: absolute
+            top: 35%
+            right: 0
+
+        &__item
+            +transition(all, .3s, ease-in-out)
+            float: left
+            margin-right: 9%
+            position: relative
+            right: -25%
+
+            &:hover
+                color: gray
+
+        &__link
+            +transition(all, .3s, ease-in-out)
+            float: left
+
+            &:hover
+                color: gray     
+
+
+
+
+    
+    //services
+    .services
+        float: left
+        width: 100%
+        
+    .card
+        padding: 80px 40px 40px 40px
+        float: left
+        width: 33%
+
+    //jobs
+    //jobs
+    .job
+        width: 100%
+
+        &--black
+            width: 100%
+            background: $sec-bgd
+            padding: 40px 0
+
+        &__description
+            width: 80%
+            margin: 0 auto
+            text-align: left
+
+            &--black
+                width: 80%  
+                margin: 0 auto
+
+        &__text
+        
+            p
+                font-size: $p
+                display: inline
+
+        &--black
+            color: #fff 
+
+        &__title
+            font-size: $h5
+            margin-bottom: 20px
+
+        &--black
+            color: #ffffff
+
+        &__hash
+
+            &--small
+                display: none        
+    //about
+    .about
+
+        &__wrap
+            width: 80%
+
+            &__br-on-sm 
+                display: none
+
+        &__text
+            width: 60%
+    //socials
+    //........
+    .socials
+        float: left
+        margin: 200px 0 150px 0
+
+
+
+    //footer
+    .footer
+        float: left
+        width: 100%
+        padding: 80px 0
+
+        &__contact
+            width: 80%
+            margin: 0 auto 
+
+        &__info
+            float: left
+            width: 33%
+
+        &__title
+            margin-bottom: 20px   
+
+            img
+                float: left
+
+            h5
+                position: relative
+                top: 10px
+                margin-left: 30px
+
+        &__socials
+            &--small
+                display: none    
+
+    //footer-down
+    .footer-down
+        float: left
+        
+        &__right
+            width: 21%
+
+        &__right--small
+            display: none
+
+
+

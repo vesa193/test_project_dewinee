@@ -1,0 +1,67 @@
+@import ../helpers/vars.sass
+@import ../helpers/mixins.sass
+
+.header
+
+    &__wrapper
+        width: 100%
+        height: 529px
+        +flexbox()
+        +flex-direction(column)
+        +justify-content(center)
+        +align-items(center)
+
+    &__heading
+        width: 60%
+        height: 330px
+        +flexbox()
+        +flex-direction(column)
+        +justify-content(center)
+        +align-items(center)
+        text-align: center
+        
+        h1
+            text-transform: uppercase
+            letter-spacing: 0.001em
+            line-height: 62px
+
+        .header__headline
+            font-size: $headline
+            line-height: 1.2em
+            font-weight: 400       
+
+
+.navbar
+    width: 100%
+
+.nav
+    +flexbox()
+    +justify-content(space-between)
+    +align-items(center)
+
+    &__logo
+        width: 200px
+        height: 70px
+        +flexbox()
+        +background('../img/logoNew.png', center, no-repeat)
+        +background-size(content)
+
+    &__menu    
+        width: 30%
+        height: 70%
+        +flexbox()
+        +justify-content(space-around)
+        +align-items(center)
+    
+    &__links
+        +flexbox()
+
+
+    &__follow
+        display: none    
+        
+    &__item
+        text-transform: uppercase
+
+    &__link
+        color: $p-color

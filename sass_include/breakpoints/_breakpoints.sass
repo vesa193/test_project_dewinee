@@ -1,0 +1,221 @@
+@import ../helpers/vars.sass
+@import ../helpers/mixins.sass
+
+
+
+// Usage
+
+//smartphone / extra-small devices
+
+@media (max-width: $screen-xs-max) 
+    //defualt
+    .brake-text
+        display: none
+
+
+    //header
+    .header
+        width: 100%
+        height: auto
+        position: relative
+        +background('../img/bunner-mob.jpg', center, no-repeat)
+        +background-size(cover)
+
+        &__wrapper
+
+        &__heading 
+            
+            h1
+                font-size: $h1-xs
+    
+    .navbar   
+        +flexbox()
+        +align-items(center)
+
+    .nav
+        width: 100%
+
+        &__menu
+            +flexbox()
+            +flex-direction(column)
+            +justify-content(space-evenly)
+            +align-items(center)
+            width: 100%
+            position: absolute
+            top: 70px
+            left: 0
+            height: 528px
+            background: rgba(0,0,0,.90)
+            z-index: 100
+
+        &__link
+            color: gray    
+    //services
+    .services
+        flex-direction: column
+
+    .card
+        padding: 80px 15px 40px 15px
+    //jobs
+        .jobs
+
+            &__title
+                padding: 0 15px
+
+                h3
+                    font-size: $headline-xs
+
+        .job
+            width: 100% 
+            padding: 0 15px 
+
+           &__description
+                width: 100%
+
+                &--black
+                    width: 100%
+
+            &__btn
+                padding: 0 5px      
+    //about
+
+    //socials
+
+    //footer
+
+    //footer-down
+
+
+
+
+//small devices (tablet, notebook)
+
+@media all and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) 
+    //header
+
+    //services
+
+    //jobs
+
+    //about
+
+    //socials
+
+    //footer
+
+    //footer-down
+ 
+
+//medium devices (laptop)
+
+@media all and (min-width: $screen-md-min) and (max-width: $screen-md-max) 
+    //header
+
+    //services
+
+    //jobs
+
+    //about
+
+    //socials
+
+    //footer
+
+    //footer-down
+ 
+
+//large screen
+
+@media all and (min-width: $screen-lg-min)  
+    //header
+    .header
+        width: 100%
+        height: 695px
+        +background('../img/bunner.jpg', center, no-repeat)
+        +background-size(cover)
+
+    //navbar in header section
+    .navbar   
+        +flexbox()
+        +justify-content(center)
+        +align-items(center)
+    
+    .nav
+        width: 80%
+        height: 70px 
+
+
+    
+    //services
+    .services
+        
+    .card
+        padding: 80px 40px 40px 40px
+
+    //jobs
+        .job
+            width: 100%
+            +flexbox()
+            +justify-content(center)
+
+            &--black
+                +flexbox()
+                +justify-content(center)
+                +align-items(center)
+                width: 100%
+                background: $sec-bgd
+                padding: 40px 0
+
+            &__description
+                width: 80%
+
+                &--black
+                    width: 80%     
+    //about
+
+    //socials
+
+    //footer
+
+    //footer-down
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

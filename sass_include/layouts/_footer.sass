@@ -1,0 +1,105 @@
+@import ../helpers/vars.sass
+@import ../helpers/mixins.sass
+
+
+.footer
+    width: 100%
+    background: #222222
+    padding-top: 80px
+    padding-bottom: 80px
+
+
+    &__info
+        +flexbox()
+        +flex-direction(column)
+        font-size: $p
+        
+
+    &__title
+        +flexbox()
+        +justify-content(flex-start)
+        +align-items(flex-end)
+        margin-bottom: 20px
+
+        h5
+            font-size: $p
+            margin-left: 10px        
+            font-weight: 400
+            color: $footer-title
+
+    &__card
+        +flexbox()
+        +flex-direction(column)    
+        color: gray
+
+
+
+
+
+
+
+//smartphone / extra-small devices
+
+//@media (max-width: $screen-xs-max) 
+
+
+
+
+
+
+
+//large screen
+
+//@media all and (min-width: $screen-lg-min) 
+
+//footer
+    .footer
+        width: 100%
+        padding: 80px 0
+        +justify-content(center)
+
+    &__contact
+        width: 80%
+        +flexbox()
+        +flex-direction(row)
+        +justify-content(space-around)
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
